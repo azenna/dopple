@@ -1,0 +1,26 @@
+[package]
+name = "dopple"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.75"
+clap = { version = "4.4.6", features = ["derive"] }
+prost = "0.12.1"
+tokio = { version = "1.33.0", features = ["macros", "rt-multi-thread"] }
+tonic = "0.10.2"
+
+[build-dependencies]
+tonic-build = "0.10"
+anyhow = "1.0.75"
+
+
+[[bin]]
+name = "doppled"
+path = "src/doppled.rs"
+
+[[bin]]
+name = "dopple"
+path = "src/dopple.rs"

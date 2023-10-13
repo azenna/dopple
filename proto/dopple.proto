@@ -1,0 +1,17 @@
+syntax = "proto3";
+package dopple;
+
+service Dopple {
+    rpc Register (DoppleRequest) returns (DoppleReply);
+}
+
+
+message DoppleRequest {
+    string path = 1;
+    string qath = 2;
+}
+
+message DoppleReply {
+    string reply = 1;
+}
+
